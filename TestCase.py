@@ -5,7 +5,7 @@ class TestUrlMethods(unittest.TestCase):
     self.assertEqual
 
 
-    ls(url, 'http://192.168.17.84/freebix')
+    is(url, 'http://192.168.17.84/freebix')
 
 if __name__ == '__newscrapy__':
     unittest.main()
