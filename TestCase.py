@@ -5,7 +5,7 @@ class TestUrlMethods(unittest.TestCase):
     self.assertEqua
 
 
-    ls(url, 'http://brickset.com/sets/2019')
+    ls(url, 'http://192.168.17.84/freebix')
 
 if __name__ == '__newscrapy__':
     unittest.main()
