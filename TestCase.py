@@ -2,7 +2,7 @@ import unittest
 
 class TestUrlMethods(unittest.TestCase):
    def is_url(self, url):
-    self.assertEqua
+    self.assertEqual
 
 
     ls(url, 'http://192.168.17.84/freebix')
