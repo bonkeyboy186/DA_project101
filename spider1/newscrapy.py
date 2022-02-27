@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 class NewSpider(scrapy.Spider):
     name = "new_spider"
-    start_urls = ['http://brickset.com/sets/2019']
+    start_urls = ['http://192.168.17.84/freebix']
     def parse(self, response):
         css_selector = 'img'
         for x in response.css(css_selector):
@@ -33,6 +33,6 @@ class NewSpider(scrapy.Spider):
                     # sometimes an image source can be relative
                     # if it is provide the base url which also happens
                     # to be the url variable atms.
-                    url = '{}{}'.format('http://brickset.com/sets/2019', url)
+                    url = '{}{}'.format('http://192.168.17.84/freebix', url)
                 response = requests.get(url)
                 f.write(response.content)
