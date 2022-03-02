@@ -12,7 +12,7 @@ except socket.error as err:
 # Default web port
 port = 80;
 try:
-    host_ip = socket.gethostbyname("http://192.168.142.244/freebix");
+    host_ip = socket.gethostbyname("http://192.168.142.244/freebix"); # Use your IP
 except socket.gaierror:
     print("There is a problem resolving the host");
     sys.exit();
