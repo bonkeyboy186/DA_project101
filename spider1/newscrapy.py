@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 class NewSpider(scrapy.Spider):
     name = "new_spider"
-    start_urls = ['http://192.168.17.84/freebix']
+    start_urls = ['http://192.168.142.244/freebix'] # Use your IP
     def parse(self, response):
         css_selector = 'img'
         for x in response.css(css_selector):
@@ -16,7 +16,7 @@ class NewSpider(scrapy.Spider):
             }
     def scarface(self):
     # To recurse next page
-        response = requests.get('http://brickset.com/sets/2019')
+        response = requests.get('http://192.168.142.244/freebix') # Use your IP
 
         soup = BeautifulSoup(response.text, 'html.parser')
         img_tags = soup.find_all('img')
@@ -33,6 +33,6 @@ class NewSpider(scrapy.Spider):
                     # sometimes an image source can be relative
                     # if it is provide the base url which also happens
                     # to be the url variable atms.
-                    url = '{}{}'.format('http://192.168.17.84/freebix', url)
+                    url = '{}{}'.format('http://192.168.142.244/freebix', url) # Use your IP
                 response = requests.get(url)
                 f.write(response.content)
