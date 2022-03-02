@@ -2,7 +2,7 @@
 from lxml import html
 import requests
 # Set the target webpages
-url = 'http://192.168.17.84/freebix'
+url = 'http://192.168.142.244/freebix' # Use your IP
 r = requests.get(url)
 # This will get the full page
 print(r.text)
@@ -40,7 +40,7 @@ headers = {
     'user-agent' : 'Mobile'
 }
 
-page = requests.get('http://192.168.17.84/freebix', headers=headers)
+page = requests.get('http://192.168.142.244/freebix', headers=headers) # Use your IP
 tree = html.fromstring(page.content)
 
 userAgent = tree.xpath('//*[@id="uas_textfield"]/text()')
